@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 16px;
+
+  &.isFirst {
+    padding-top: 34px;
+  }
+
+  &:hover .actions {
+    opacity: 1;
+  }
+}
+
+.files {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+
+.filesWithDocuments {
+  --message-file-image-size: 64px;
+}
+
+.bubble {
+  max-width: calc(100% - 88px);
+  box-sizing: border-box;
+  padding: 10px 16px;
+  border-radius: 22px;
+  font-size: calc(16px * var(--ds-chat-font-scale, 1));
+  line-height: calc(24px * var(--ds-chat-font-scale, 1));
+  color: var(--dsw-alias-label-primary);
+  background-color: var(--dsw-specific-bubble);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media not all and (min-width: 440px) {
+  .bubble {
+    max-width: calc(100% - 68px);
+  }
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 28px;
+  margin-top: 6px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity var(--ds-transition-duration) var(--ds-ease-in-out);
+
+  &:focus-within {
+    opacity: 1;
+  }
+}
+
+.alwaysShow {
+  opacity: 1;
+}

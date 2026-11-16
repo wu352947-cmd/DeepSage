@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DeepSage</string>
+    <string name="title_activity_main">DeepSage</string>
+    <string name="package_name">com.deepsage.app</string>
+    <string name="custom_url_scheme">com.deepsage.app</string>
+</resources>
